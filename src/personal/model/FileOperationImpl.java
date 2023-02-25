@@ -27,15 +27,16 @@ public class FileOperationImpl implements FileOperation {
             BufferedReader reader = new BufferedReader(fr);
             // считаем сначала первую строку
             String line = reader.readLine();
-            if (line != null) {
-                lines.add(line);
-            }
+//            if (line != null) {                 // непонял смысл связки этого условия и следующего цикла while
+//                lines.add(line);                // сделал конструкцию попроще и смысл не поменялся если я правильно понял
+//            }
             while (line != null) {
                 // считываем остальные строки в цикле
+                lines.add(line);
                 line = reader.readLine();
-                if (line != null) {
-                    lines.add(line);
-                }
+//                if (line != null) {
+//                    lines.add(line);
+//                }
             }
             fr.close();
         } catch (FileNotFoundException e) {
