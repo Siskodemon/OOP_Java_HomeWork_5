@@ -49,6 +49,7 @@ public class User {
         this.phone = phone;
     }
 
+
     @Override
     public String toString() {
         return String.format("Идентафикатор: %s\nИмя: %s,\nФамилия: %s,\nТелефон: %s", id, firstName, lastName, phone);
