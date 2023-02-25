@@ -45,17 +45,14 @@ public class ViewUser {
             }
         }
     }
-
     private void deleteUser() {
         String readId = getID("Введите ID юзера для удаления: ");
         userController.deleteUser(readId);
     }
-
     private void updateUser() throws Exception {
         String readId = getID("Введиет редактируемый ID юзера: ");
         userController.updateUser(readId,inputUser());
     }
-
     private String getID(String message) {
         String readId = prompt(message);
         return readId;
